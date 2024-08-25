@@ -1,0 +1,205 @@
+/* CSS untuk memastikan hanya halaman login yang terpengaruh */
+.login-page {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pembungkus untuk memusatkan konten login */
+.login-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kontainer login */
+.container-login {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    justify-content: center;
+    margin-top: 100px;
+    align-items: center;
+    flex-direction: column; /* Mengatur elemen di dalamnya secara vertikal */
+}
+
+/* Kolom login */
+.col-login {
+    width: 100%;
+    max-width: 300px; /* Menambahkan batas maksimal lebar */
+}
+
+/* Gambar pusat */
+.img-center {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Custom Styles for Header */
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* sidebar */
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 250px;
+    transition: all 0.3s ease;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    font-weight: bold;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#menu-toggle {
+    background-color: transparent;
+    border: none;
+}
+
+.toggled {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #sidebar-wrapper {
+      width: 0;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+      width: 250px;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+      width: calc(100% - 250px);
+    }
+}
+
+/* CSS untuk bagian profil */
+.text-center img {
+    width: 100px; /* Ubah lebar gambar profil */
+    height: 100px; /* Ubah tinggi gambar profil */
+    border-radius: 50%; /* Membuat gambar menjadi bulat */
+}
+
+.text-center h2 {
+    margin-top: 10px; /* Jarak antara gambar profil dan nama */
+    font-size: 24px; /* Ukuran font nama */
+    color: #333; /* Warna teks nama */
+}
+
+/* CSS untuk menata kartu-kartu */
+.card {
+    border: 1px solid #ccc; /* Garis tepi kartu */
+    border-radius: 8px; /* Sudut bulat pada kartu */
+    text-align: center; /* Konten teks diatur ke tengah */
+    height: 100%; /* Menyesuaikan tinggi kartu */
+}
+
+.card-title {
+    font-size: 24px; /* Ukuran font judul */
+    margin-bottom: 10px; /* Jarak antara judul dan teks */
+}
+
+.card-text {
+    font-size: 16px; /* Ukuran font teks */
+}
+
+/* CSS untuk Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Jarak antara tabel dan elemen sebelumnya */
+}
+
+thead {
+    background-color: #f5f5f5; /* Warna latar belakang header */
+}
+
+th, td {
+    padding: 10px; /* Padding di antara sel */
+    text-align: center; /* Teks diatur ke tengah */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Warna latar belakang baris ganjil */
+}
+
+tbody td {
+    vertical-align: middle; /* Teks vertikal di tengah */
+}
+
+/* DETAIL PEKERJAAN */
+.card-detail .form-group {
+    margin-bottom: 1rem;
+}
+
+.card-detail .form-group label {
+    font-weight: bold;
+}
+
+.card-detail .file-info label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.card-detail .file-info input[type="file"] {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Inputan */
+.custom-file-input {
+    opacity: 0;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.custom-file-label {
+    position: relative;
+    padding: .375rem .75rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.custom-file-label::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    pointer-events: none;
+    color: #495057;
+    content: "Browse";
+    background-color: #e9ecef;
+    border-left: 1px solid #ced4da;
+}

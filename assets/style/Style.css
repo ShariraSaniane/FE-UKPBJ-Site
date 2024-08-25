@@ -1,0 +1,394 @@
+/* Global Styles */
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.img-thumbnail {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #dee2e6;
+}
+
+#fileInput {
+  display: none;
+}
+
+#profileImage {
+  cursor: pointer;
+}
+
+.card-title {
+  color: #4e73df;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #5a5c69;
+}
+
+.card-body {
+  background: linear-gradient(to bottom right, #ffffff, #f1f3f8);
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.text-center img {
+  width: 100px; /* Ubah lebar gambar profil */
+  height: 100px; /* Ubah tinggi gambar profil */
+  border-radius: 50%; /* Membuat gambar menjadi bulat */
+}
+
+.text-center h2 {
+  margin-top: 10px; /* Jarak antara gambar profil dan nama */
+  font-size: 24px; /* Ukuran font nama */
+  color: #333; /* Warna teks nama */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* Sidebar and Content Wrapper */
+#wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#sidebar-wrapper {
+  width: 250px;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  border-right: 1px solid #e3e6f0;
+  background-color: #f8f9fc;
+  padding: 15px;
+  transition: margin 0.25s;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: -250px;
+}
+
+.sidebar-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4e73df;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  border: none;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+  color: #333;
+  background-color: #fff;
+}
+
+.list-group-item i {
+  font-size: 1.25rem;
+  margin-right: 10px;
+}
+
+.list-group-item-action:hover {
+  background-color: #e2e6ea;
+  color: #333;
+}
+
+.list-group-item-action.active {
+  background-color: #4e73df;
+  color: white;
+  font-weight: bold;
+}
+
+.list-group-item-action.active i {
+  color: white;
+}
+
+#page-content-wrapper {
+  flex: 1;
+  margin-left: 250px;
+  padding-top: 56px; /* Height of navbar */
+  padding: 20px;
+}
+
+.content {
+  margin-top: 56px; /* Height of navbar */
+}
+
+/* Login Page */
+.login-page {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-login {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: block;
+  justify-content: center;
+  margin-top: 100px;
+  align-items: center;
+  flex-direction: column; /* Mengatur elemen di dalamnya secara vertikal */
+}
+
+.col-login {
+  width: 100%;
+  max-width: 300px; /* Menambahkan batas maksimal lebar */
+}
+
+.img-center {
+  display: block;
+  margin: 0 auto;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Table Styles */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: middle;
+  border-top: 1px solid #dee2e6;
+  text-align: center; /* Center content horizontally */
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+  background-color: #f8f9fc;
+  color: #4e73df;
+  font-weight: 600;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f3f8;
+}
+
+.table tbody tr td {
+  background-color: #ffffff;
+}
+
+.table tbody tr:nth-of-type(even) td {
+  background-color: #f8f9fc;
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+}
+
+.status .fas {
+  margin-right: 8px;
+}
+
+.status.disabled .fas {
+  color: #6c757d;
+}
+
+.status.starting .fas {
+  color: #007bff;
+}
+
+.status.active .fas {
+  color: #28a745;
+}
+
+/* Table Links */
+.table a {
+  color: #4e73df;
+  text-decoration: none;
+}
+
+.table a:hover {
+  text-decoration: underline;
+}
+
+/* Detail Pekerjaan */
+.card-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #e3e6f0;
+  border-radius: 10px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.card-detail .card-body {
+  padding: 20px;
+}
+
+.card-detail .card-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #4e73df;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #4e73df;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #d1d3e2;
+  /* padding: 11px; */
+  font-size: 0.9rem;
+  background-color: #f8f9fc;
+}
+
+.form-control[readonly] {
+  background-color: #e9ecef;
+}
+
+.file-info h6 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #5a5c69;
+}
+
+.list-group-item {
+  font-size: 0.9rem;
+  border: 1px solid #e3e6f0;
+  background-color: #f8f9fc;
+}
+
+.list-group-item a {
+  color: #4e73df;
+  text-decoration: none;
+}
+
+.list-group-item a:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background-color: #4e73df;
+  border-color: #4e73df;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.btn-primary:hover {
+  background-color: #2e59d9;
+  border-color: #2653d4;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+/* Custom File Input */
+.custom-file-input {
+  opacity: 0;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Atur z-index lebih tinggi untuk memastikan input file tetap bisa diakses */
+}
+
+.custom-file-label {
+  position: relative;
+  padding: .375rem .75rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #f8f9fc; /* Sesuaikan dengan warna latar belakang form control lainnya */
+  border: 1px solid #d1d3e2; /* Sesuaikan dengan border form control lainnya */
+  border-radius: 5px; /* Sesuaikan dengan border-radius form control lainnya */
+  display: flex;
+  justify-content: space-between; /* Gunakan flexbox untuk meratakan konten label */
+  align-items: center; /* Vertically align the content */
+}
+
+.custom-file-label::after {
+  content: "Browse"; /* Ubah teks jika diperlukan */
+  position: relative;
+  display: inline-block;
+  padding: .375rem .75rem;
+  font-size: .875rem;
+  color: #4e73df; /* Sesuaikan dengan warna utama */
+  background-color: #e9ecef; /* Sesuaikan dengan warna latar belakang lainnya */
+  border-left: 1px solid #d1d3e2; /* Sesuaikan dengan border lainnya */
+  border-radius: 0 5px 5px 0; /* Membuat sudut kanan border label menjadi bulat */
+  cursor: pointer; /* Mengubah kursor saat hover pada label */
+}
+
+.custom-file-label:hover::after {
+  background-color: #2e59d9; /* Ubah latar belakang saat hover untuk memberikan efek interaktif */
+  color: #fff; /* Ubah warna teks saat hover */
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="./assets/style/Style.css" rel="stylesheet"> 
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="card-detail">
+            <div class="card-body">
+                <h5 class="card-title">Edit Data🖋️</h5>
+                <!-- Informasi Pekerjaan -->
+                <form id="jobForm" method="post" action="/simpan/{{ data['uuid'] }}">
+                    <div class="form-group">
+                        <label for="namaUnit">Nama Unit:</label>
+                        <input type="text" class="form-control" id="" name="nama_unit" value="" placeholder="Nama unit" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="namaPekerjaan">Nama Pekerjaan:</label>
+                        <input type="text" class="form-control" id="" name="nama_pekerjaan" value="" placeholder="Data nama pekerjaan " readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="namaPekerjaan">Pagu:</label>
+                        <input type="text" class="form-control" id="" name="pagu" value="" placeholder="Data Pagu">
+                    </div>
+                    <div class="form-group">
+                        <label for="namaPekerjaan">Tanggal Pengajuan:</label>
+                        <input type="date" class="form-control" id="" name="tgl_pengajuan" value="" placeholder="Tanggal pengajuan ">
+                    </div>
+                    <div class="form-group">
+                        <label for="namaPekerjaan">Nama PPK:</label>
+                        <input type="text" class="form-control" id="" name="nama_ppk" value="" placeholder="nama ppk" readonly>
+                    </div>
+                    <!-- Opsional, ada opsi untuk menambahkan dengan memilih dari daftar nama yang ada, request dikirim dalam bentuk id anggota ke db -->
+                    <div class="form-group">
+                        <label for="namaPekerjaan">Nama PP</label>
+                        <input typ e="text" class="form-control" id="" name="" value="">
+                    </div>
+                    <div class="form-group"> 
+                        <label for="namaPekerjaan">Nama POKJA</label>
+                        <input type="text" class="form-control" id="" name="nama_pokja" value="">
+                    </div>
+                    <!-- ...tambahkan input fields lainnya sesuai kebutuhan... -->
+
+                    <!-- File Info -->
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Kerangka kerja</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>               
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Harga Perkiraan Sendiri</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>  
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Spesifik Teknis</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>  
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Rancangan kontrak</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>  
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Dokumen Persyaratan Penyedia Pengadaan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>  
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Dokumen persyaratan proses pemilihan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div> 
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Daftar Harga</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>    
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Jadwal pelaksanaan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>  
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Gambar rancangan pekerjaan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>           
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Dokumen studi kelayakan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>           
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Dokumen penawaran administratif</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>     
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Surat penawaran penyedia </h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>   
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Sertifikasi lisensi</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>      
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Berita acara pemberi penjelasan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>  
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Berita acara pengumuman negosiasi</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>   
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Berita acara penetapan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>        
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Surat penunjukkan penyedia barang/jasa </h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>             
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Dokumen kontrak</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Surat perintah mulai kerja</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>  
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Surat jaminan pelaksanaan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>            
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">jaminan uang muka</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>           
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Surat jaminan pemeliharaan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>                  
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Surat tagihan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>              
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Surat pemesanan e- purchasing</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>     
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Surat perintah membayar</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>            
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Surat perintah pencairan dana</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>                   
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Laporan pelaksanaan pekerjaan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>  
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Berita acara pemeriksaan hasil pekerjaan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>  
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Laporan pelaksanaan pekerjaan</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>  
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Berita acara serah terima sementara</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>           
+                    <div class="file-info mt-3">
+                        <h6 class="card-subtitle mb-2 text-muted">Berita acara serah terima</h6>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>  <br>                                                                                                                      
+                    <!-- Tombol Submit -->
+                    <!-- <button type="submit" class="btn btn-primary">Simpan</button> -->
+                    <a href="./beranda.html" class="btn btn-primary"><i class="fas fa-edit"></i>Save</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

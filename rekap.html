@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sidebar Menu</title>
+        <!-- Load Bootstrap CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Load Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <!-- Your Custom CSS -->
+        <link href="./assets/style/Style.css" rel="stylesheet"> 
+      </head>
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+          <div class="sidebar-heading">UKBPJ</div>
+          <div class="list-group list-group-flush">
+              <!-- Sidebar Menu -->
+              <a href="beranda.html" class="list-group-item list-group-item-action">
+                  <i class="fas fa-home"></i> Beranda
+              </a>
+              <a href="pekerjaan.html" class="list-group-item list-group-item-action">
+                  <i class="fas fa-file-alt"></i> Pekerjaan Saya
+              </a>
+              <a href="rekap.html" class="list-group-item list-group-item-action active">
+                  <i class="far fa-save"></i> Rekap
+              </a>
+              <a href="picture.html" class="list-group-item list-group-item-action ">
+                  <i class="fas fa-user"></i> Akun 
+              </a>
+          </div>
+      </div>
+      <!-- /#sidebar-wrapper -->
+    <div id="page-content-wrapper" class="container-fluid">
+        <!-- Header -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
+            <span class="navbar-brand mb-0 h1 ml-2"></span>
+            <div class="ml-auto">
+              <img src="https://static.vecteezy.com/system/resources/previews/006/732/119/non_2x/account-icon-sign-symbol-logo-design-free-vector.jpg" alt="Profile Picture" class="profile-image mr-3">
+            </div>
+        </nav>
+        <!-- /Header -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper" class="container-fluid">
+        <div class="row mt-4">
+          <div class="col-md-12">
+          </div>
+        </div>
+  
+      <h2 class="mt-4">Rekapan data</h2>
+        <div class="form-group-rekap">
+          <label for="yearSelect">Select Year:</label>
+          <select id="yearSelect" class="form-control w-25">
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <!-- Add more years as needed -->
+          </select>
+     
+                    <!-- Table -->
+                    <h2 class="mt-4">Data kegiatan 2023</h2>
+                    <div class="table-responsive">
+                        <table class="table table-bordered mt-2 text-center">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Nama Unit</th>
+                                    <th scope="col">Tanggal Pengajuan</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Detail</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Ira</td>
+                                    <td>Unit A</td>
+                                    <td>2023-11-20</td>
+                                    <td><span class="status disabled"><i class="fas fa-circle"></i> Selesai</span></td>
+                                    <td><a href="detail.html">Detail</a></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Dava</td>
+                                    <td>Unit B</td>
+                                    <td>2023-11-21</td>
+                                    <td><span class="status starting"><i class="fas fa-circle"></i> Mulai</span></td>
+                                    <td><a href="detail.html">Detail</a></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Aditya</td>
+                                    <td>Unit C</td>
+                                    <td>2023-11-21</td>
+                                    <td><span class="status active"><i class="fas fa-circle"></i> Berlangsung</span></td>
+                                    <td><a href="detail.html">Detail</a></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Unknow</td>
+                                    <td>Unit D</td>
+                                    <td>2023-11-21</td>
+                                    <td><span class="status active"><i class="fas fa-circle"></i> Berlangsung</span></td>
+                                    <td><a href="detail.html">Detail</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /Table -->
+                </div>
+            </div>
+        </div>
+  <!-- Load Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const yearSelect = document.getElementById('yearSelect');
+    const tableBody = document.getElementById('rekapanTableBody');
+
+    yearSelect.addEventListener('change', function () {
+        const selectedYear = this.value;
+        const rows = tableBody.getElementsByTagName('tr');
+
+        for (let i = 0; i < rows.length; i++) {
+            const row = rows[i];
+            const year = row.getAttribute('data-year');
+            if (year === selectedYear) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        }
+    });
+
+    // Trigger change event on page load to filter rows based on initial selection
+    yearSelect.dispatchEvent(new Event('change'));
+});
+
+  </script>
+  <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
