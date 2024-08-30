@@ -1,11 +1,28 @@
-<h1> UKPBJ SITE </h1>
+<h1> UKPBJ SITE ⚙️</h1>
 <h2>Digital Solution for Job Data Management at UKPBJ ✨</h2>
 
-In the UKPBJ work environment, managing and retrieving documents has been a significant challenge due to the lack of an online document storage system. Manual processes, which have been in place for a long time, not only consume a significant amount of time but also increase the risk of errors and data loss. To address these issues, the UKPBJ Site application was developed to improve efficiency and accuracy in job data management
+The UKPBJ Site is an application designed to simplify the process of inputting data for each job by the Procurement Working Unit (UKPBJ). This application allows all documents to be stored online in a database, facilitating easy data search and management. Available features include:
 
-The UKPBJ Site is an application designed to simplify the process of inputting data for each job by the Procurement Working Unit (UKPBJ). This application allows all documents to be stored online in a database, facilitating easy data search and management
+**Key Features:**
+* **Activity Summary:** Offers a detailed overview of completed activities, including year-over-year comparisons and current projects.
+* **Employee Task Tracking:** Enables efficient monitoring of individual employee tasks and progress.
+* **Data Reporting:** Generates customizable reports for comprehensive data analysis and decision-making.
 
-Here's a look at the ukpbj site homepage 
-<img src = "\Kuliah\Bismillah\FE\FE-UKPBJ-Site\assets\imgsberanda.png">
+**Technology Stack:**
+* **Frontend:** HTML, CSS, JavaScript
+* **UI/UX Design:** Figma
+
+**Visual Example:**
+![System Interface](./assets/imgs/UKPBJ.jpg)
+
+**Benefits:**
+* Improved project visibility and transparency.
+* Enhanced team collaboration.
+* Data-driven decision-making.
 
 More information : [Presentation](https://www.canva.com/design/DAGGtWD3qHY/X5lWUtidvYo22Cxwru7s-Q/edit?utm_content=DAGGtWD3qHY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+**Contact:**
+
+* Email: Sharirasaniane95@gmail.com
+* LinkedIn: [LinkedIn Sharira](https://www.linkedin.com/in/sharira-saniane/)
